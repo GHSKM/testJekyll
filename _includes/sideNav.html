@@ -1,0 +1,15 @@
+ {% assign default ="India" %} {% assign id ={{page.region}} %}
+  {% if id %} 
+      {% assign packages = site.twsPackages | where:"region", id %} 
+ {% else %}
+     {% assign packages = site.twsPackages | where:"country", default %} 
+     {% endif %} 
+
+
+<ul>
+
+    {% for item in packages %}
+    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+
+</ul>

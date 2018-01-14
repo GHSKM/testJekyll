@@ -1,0 +1,54 @@
+{% assign id = "/twsPackages/" | append: include.package_id %}
+{{id}}
+
+{% assign packages = site.twsPackages | where:"id", id %}
+  
+  <div class="row">
+   {% for package in site.twsPackages %}
+    <div class="col-xs-18 col-sm-6 col-md-3" id="{{ include.package_id | slugify }}">
+          <div class="thumbnail text-center">
+           {{ package.thumbnail }}
+            <img src= "{{ package.thumbnail }}" alt="">
+              <div class="caption">
+                <h4>  {{ package.title }}</h4>
+                 <h5>  {{ package.shortDesc }}</h5>
+                <p>{{package.description}}</p>
+                  <p><a href="{{ package.url }}" class="btn btn-info" role="button">View More</a> </p>
+            </div>
+          </div>
+        </div>
+{% endfor %}
+</div>
+<!--<div class="row" id="{{ include.package_id | slugify }}">
+<div class="col-md-3"><img src="package.thumbNail" alt=""></div>
+ <div class="col-md-9 ">
+  <div class="package-overview-heading">
+    <h3 class="package-overview-name">
+      <a href="{{ package.url }}">
+         
+            {{ package.title }}
+          
+      </a>
+    </h3>
+
+    <p class="package-overview-description">{{ package.description }}</p>
+  </div>
+
+  <div class="package-details">
+      <table class="package-rules">
+        <tr>
+        {% assign types = "permissions|conditions|limitations" | split: "|" %}
+        {% for type in types %}
+         {{type}}
+          <th class="label">{{ type | capitalize }}</th>
+        {% endfor %}
+        </tr>
+        <tr>
+      
+        </tr>
+      </table>
+      <p class="small"><a href="{{ package.url }}">View full {{ package.title }} »</a></p>
+  </div>
+</div>
+
+</div>-->

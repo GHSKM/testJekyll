@@ -1,0 +1,55 @@
+.fullWidth
+{
+    width:100%
+}
+.thinBorder
+{
+    border: 1px grey solid;
+}
+
+.fixedBackground
+{
+    position: fixed;
+    background-image: linear-gradient(160deg,#02ccba,#aa7ecd);
+    z-index: 0;
+    top: 0;
+    left: 0
+   
+*/
+  /*  background-image : url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/30354/parallax2.jpg);
+    background: linear-gradient(160deg,#02ccba,#aa7ecd);
+    position: absolute;
+    top: 0;
+    left: 0;*/
+  transform :skew(0,-15deg);
+    
+}
+
+.jumboHeight{
+    height:300px;
+}
+
+
+.relativePostion
+{
+    position: relative;
+    background-color: white;
+}
+
+.paddingSmall
+{
+    padding:5px;
+}
+.paddingMedium
+{
+    padding:10px;
+}
+.paddingLarge
+{
+    padding:20px;
+}
+
+.fixedNav
+{
+    position:fixed;
+}
